@@ -1,0 +1,9 @@
+<?php
+    session_start();
+    if(isset($_GET['idcart'])){
+        array_slice($_SESSION['mycart'],$_GET['idcart'],1);
+    }else{
+        $_SESSION['mycart']=[];
+    }
+    header('location:gio-hang.php');
+?>
